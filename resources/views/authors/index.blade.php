@@ -17,6 +17,7 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Cognome</th>
                 <th scope="col">Data di nascita</th>
+                <th scope="col">Nazionalita`</th>
                 <th scope="col">Azioni</th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@
                     <td>{{$author->name}}</td>
                     <td>{{$author->lastname}}</td>
                     <td>{{$author->date_of_birth}}</td>
+                    <td>{{$author->info->nationality}}</td>
                     <td>
                         <form action="{{route('authors.destroy', $author->id)}}" method="POST">
                             @csrf
